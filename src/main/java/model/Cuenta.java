@@ -90,14 +90,13 @@ public abstract class Cuenta {
 
     }
 
-    @Override
-    public String toString() {
-        return "Cuenta{" +
-                "saldo=" + saldo +
-                ", numeroConsignaciones=" + numeroConsignaciones +
-                ", numeroRetiros=" + numeroRetiros +
-                ", tasaAnual=" + tasaAnual +
-                ", comisionMensual=" + comisionMensual +
-                '}';
-    }
+    public void imprimir() {
+    int totalTransacciones = this.numeroConsignaciones + this.numeroRetiros;
+
+    System.out.println("=== Cuenta ===");
+    System.out.println("Saldo actual: $" + this.saldo);
+    System.out.println("Comisión mensual: $" + this.comisionMensual);
+    System.out.println("Número de transacciones: " + totalTransacciones);
+}
+
 }
